@@ -1,17 +1,23 @@
 .todos__single {
     display: flex;
-    width: 29.5%;
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
     background-color: #FFAE42;
+    transition: 0.2s;
+}
+
+.todos__single:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
 }
 
 .todos__single--text {
     flex: 1;
-    padding: 5px;
+    padding: .5rem;
     border: none;
     font-size: 20px;
+    background-color: transparent;
 }
 
 .todos__single--text:focus {
@@ -24,9 +30,13 @@
     cursor: pointer;
 }
 
-@media (max-width: 1200px) {
-    .todos__single {
-        width: 40%;
+.remove {
+    background-color: #1BD7BB;
+}
+
+@media (max-width: 1100px) {
+    .todos {
+        width: 45%;
     }
 }
 
@@ -36,8 +46,11 @@
     }
     .todos {
         width: 95%;
+        margin-bottom: 10px;
     }
-    .todos__single {
-        width: 100%;
+
+    .container {
+        width: 95%;
+        flex-direction: column;
     }
 }
